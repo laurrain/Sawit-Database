@@ -279,7 +279,7 @@ exports.getUpdatePlacement = function(req, res, next){
             if(err){
                     console.log("Error Selecting : %s ",err );
             }
-            res.render('editPlacement',{page_title:" edit learner placement - Node.js", data : rows[0]});      
+            res.render('editPlacement',{page_title:" edit placement - Node.js", data : rows[0]});      
         }); 
     });
 };
