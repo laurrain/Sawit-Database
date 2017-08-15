@@ -1,0 +1,21 @@
+<table class="table" id="surnamesList">
+    <tr>
+        <th>ID Number</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Gender</th>
+        <th>Race</th>
+        <th>Language</th>
+        <th>PhoneNo</th>
+        <th>Address</th>
+        <th>Account NO</th>
+        <th>Course</th>
+        <th>Location</th>
+        <th>Facilitator</th>
+    </tr>                          
+    {{#learner}} 
+        <tr>
+            <td>{{Idnumber}}</td><td>{{Name}}</td><td>{{surname}}</td><td>{{gender}}</td><td>{{race}}</td><td>{{Language}}</td><td>{{phone}}</td><td><a href="/learner/view/{{Idnumber}}">View</a></td><td>{{accountNo}}</td><td>{{course}}</td><td>{{location}}</td><td>{{facilitator}}</td><td><a href="/learner/edit/{{Idnumber}}">Edit</a></td><td><a href="/learner/delete/{{Idnumber}}">Delete</a></td>
+        </tr>
+    {{/learner}}               
+</table>

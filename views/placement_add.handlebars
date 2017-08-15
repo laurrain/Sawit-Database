@@ -1,0 +1,49 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="add">
+<h2 class="text-center">Add Learner Placement</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/placement'">Back To Placement List</button>
+ {{#data}}
+ <form id="formAdd" autocomplete="on" action="/placement_add" method="Post">
+  <div class="group">
+    <input type="text" name="Idnumber"  value="{{Idnumber}}">
+    <label for="Idnumber">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" name="Name"  value="{{Name}}">
+    <label for="Name">Name</label>
+  </div>
+  <div class="group">
+    <input type="text" name="surname"  value="{{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Work Location" name="work_location" data-bind="value: {{work_location}}">
+    <label for="name">Work Location</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Remunerationt Amount" name="remuneration_amount" data-bind="value: {{remuneration_amount}}">
+    <label for="remuneration_amount">Renumeration</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Activities" name="activities" data-bind="value: {{activities}}">
+    <label for="activities">Activities</label>
+  </div>
+  <div class="group">
+    <input type="date" placeholder="month" name="month" data-bind="value: {{month}}">
+    <label for="month">Month</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="Sign Attendance" name="sign_attendance" data-bind="value: {{sign_attendance}}">
+    <label for="sign_attendance">Sign Attendance</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Accept"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>
+
+

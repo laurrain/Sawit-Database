@@ -1,0 +1,44 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="viewprofile">
+<div class="container">
+<h3 class="text-center">Display a learner Wine Industry option</h3>
+
+{{#data}}
+<form id='form1' class="form-content" method="GET" action="/learner/display/{{Idnumber}}"> 
+	<div class="group">
+    <input type="checkbox"  name="fields" value="{{fields}}" readOnly/>
+    <label for="fields">Field</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="wine" value="{{wine}}" readOnly/>
+    <label for="wine">Wine</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="cellar" value="{{cellar}}" readonly/>
+    <label for="cellar">Cellar</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="marketing" value="{{marketing}}" readonly/>
+    <label for="marketing">Sales And Marketing</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="receptionist" value="{{receptionist}}" readonly/>
+    <label for="receptionist">Receptionist</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="packaging" value="{{packaging}}" readonly/>
+    <label for="packaging">Packaging And Distribution</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="exports" value="{{exports}}" readonly/>
+    <label for="exports">exports</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="tourism" value="{{tourism}}" readonly/>
+    <label for="tourism">Tourism And Restaurant</label>
+  </div>
+	<input id="bt" action="action" type="submit" value="Exit" onclick="history.go(-1);"/>
+</form>
+{{/data}}
+</div>
+</div>

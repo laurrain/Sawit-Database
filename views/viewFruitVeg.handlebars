@@ -1,0 +1,61 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="viewprofile">
+<div class="container">
+<h3 class="text-center">Display a learner Fruit And vegetable Option</h3>
+<script type="text/javascript">
+var checked= function(DC){
+  var check; 
+  if(check === "0"){
+    return check;
+  }else{
+    return 
+  }
+}
+</script>
+{{#data}}
+<form id='form1' class="form-content" method="GET" action="/viewFruitVeg/{{Idnumber}}"> 
+	<div class="group">
+    {{#if fruit}} 
+    <input type="checkbox" name="fruit" value="{{fruit}}" checked readOnly/>
+    {{else}}
+    <input type="checkbox" name="fruit" readOnly/>
+    {{/if}}
+    <label for="fruit">Fruit</label>
+  </div>
+  <div class="group">
+    {{#if dairy}} 
+    <input type="checkbox" name="dairy" value="{{dairy}}" checked readOnly/>
+    {{else}}
+    <input type="checkbox" name="dairy"readOnly/>
+    {{/if}}
+    <label for="dairy">Dairy</label>
+  </div>
+  <div class="group">
+    {{#if vegetable}}
+    <input type="checkbox"  name="vegetable" value="{{vegetable}}" checked readonly/>
+    {{else}}
+    <input type="checkbox"  name="vegetable" readonly/>
+    {{/if}}
+    <label for="vegetable">Vegetable</label>
+  </div>
+  <div class="group">
+    {{#if berry}}
+    <input type="checkbox" name="berry" value="{{berry}}" checked readonly/>
+    {{else}}
+    <input type="checkbox" name="berry" readonly/>
+    {{/if}}
+    <label for="berry">Berry</label>
+  </div>
+  <div class="group">
+    {{#if deciduous}}
+    <input type="checkbox" name="deciduous" value="{{deciduous}}" checked readonly/>
+    {{else}}
+    <input type="checkbox" name="deciduous" readonly/>
+    {{/if}}
+    <label for="deciduous">Deciduous Fruit</label>
+  </div>
+	<input id="bt" action="action" type="submit" value="Exit" onclick="history.go(-1);"/>
+</form>
+{{/data}}
+</div>
+</div>

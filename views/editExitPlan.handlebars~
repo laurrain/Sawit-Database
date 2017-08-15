@@ -1,0 +1,48 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="edit">
+<h2 class="text-center">Update Learner Exit Plan</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/placement'">Back To Exit Plan List</button>
+
+{{#data}}
+<form id="formAdd" autocomplete="on" action="/exitPlan/updateExitPlan/{{IDno}}" method="Post">
+  <div class="group">
+  <input type="text" name="IDno" value="{{IDno}}">
+    <label for="Idnumber">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" name="Name" value="{{Name}}">
+    <label for="name">Name</label>
+  </div>
+  <div class="group">
+    <input type="text" name="surname" value="{{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" name="education" value="{{education}}">
+    <label for="work_location">Education Level</label>
+  </div>
+  <div class="group">
+    <input type="text" name="employed" value="{{employed}}">
+    <label for="employed">Employed</label>
+  </div>
+  <div class="group">
+    <input type="text" name="sector" value="{{sector}}">
+    <label for="sector">Sector</label>
+  </div>
+  <div class="group">
+    <input type="text" name="entrepreneur" value="{{entrepreneur}}">
+    <label for="entrepreneur">Entrepreneur</label>
+  </div>
+
+  <div class="group">
+    <input type="text" name="sectors" value="{{sectors}}">
+    <label for="sectors">Sectors</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Submit"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>

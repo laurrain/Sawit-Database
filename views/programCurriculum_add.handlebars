@@ -1,0 +1,49 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="add">
+<h2 class="text-center">Add a Module</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/programCurriculum'">Back To Learner List</button>
+ {{#data}}
+ <form id="formAdd" autocomplete="on" action="/programCurriculum_add" method="Post">
+  <div class="group">
+    <input type="text" placeholder="Module Name" name="module_name"  data-bind="value: {{module_name}}">
+    <label for="module_name">Module Name</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Facilitator" name="facilitator" data-bind="value: {{facilitator}}">
+    <label for="facilitator">Facilitator</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Assessment Test" name="assess_test" data-bind="value: {{assess_test}}">
+    <label for="assess_test">Assessment Test</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Assigment" name="assignment" data-bind="value: {{assignment}}">
+    <label for="assignment">Assignment</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Practical" name="practical" data-bind="value: {{practical}}">
+    <label for="practical">Practical</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Group Work" name="group_work" data-bind="value: {{group_work}}">
+    <label for="group_work">Group Work</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="dd/mm/yyyy" name="Month" data-bind="value: {{month}}">
+    <label for="month">Month</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="Placement" name="placement" data-bind="value: {{placement}}">
+    <label for="placement">Placement</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Accept"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>
+
+

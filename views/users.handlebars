@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IQPoint</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <tbody>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 align="center">Sawit Educate To Empower</h1>
+      </div>
+
+    <h2>USERS</h2> 
+
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-md-3">Username</th><th class="col-md-3">Locked</th><th class="col-md-3">User Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#users}}
+      <tr>
+        <td>{{username}}</td><td>{{admin}}</td><td>{{locked}}</td><td><a href="/users/promoteUser/{{username}}">Promote User</a></td>
+      </tr>
+    {{/users}}
+  </tbody>
+</table>
+    </div>
+</body>
+</html>

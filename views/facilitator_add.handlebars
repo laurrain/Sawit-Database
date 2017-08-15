@@ -1,0 +1,47 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="addFacilit">
+<h2 class="text-center">Add a Facilitator</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/lecturer'">Back To facilitators List</button>
+
+ {{#data}}
+ <form id="formAddFacilit" autocomplete="on" action="/facilitator_add" method="Post">
+  <div class="group">
+    <input type="text" placeholder="Id Number" name="idNo"  data-bind="value: {{idNo}}">
+    <label for="idNo">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Name" name="Name" data-bind="value: {{Name}}">
+    <label for="name">Name</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Surname" name="surname" data-bind="value: {{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Phone Number" name="phone" data-bind="value: {{phone}}">
+    <label for="phone">Phone Number</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="email" name="email" data-bind="value: {{email}}">
+    <label for="address">E-mail</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="Course" name="course" data-bind="value: {{course}}">
+    <label for="course">Course</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Course Location" name="location" data-bind="value: {{location}}">
+    <label for="name">Course Location</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Accept"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>
+
+

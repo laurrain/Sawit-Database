@@ -1,0 +1,85 @@
+
+ <div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="add">
+<h2 class="text-center">Capture Learner Questionaire</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/learner'">Back To Learner List</button>
+
+ {{#data}}
+ <form id="formAdd" id="questionaireCap" autocomplete="on" action="/questionaireCapture" method="Post">
+  <div class="group">
+    <input type="text" placeholder="Id Number" name="Idnumber"  data-bind="value: {{Idnumber}}">
+    <label for="Idnumber">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Surname" name="surname" data-bind="value: {{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Name" name="Name" data-bind="value: {{Name}}">
+    <label for="name">Name</label>
+  </div></br>
+  
+  <div class="group">
+    <input type="checkbox" name="fruit" data-bind="value: {{fruit}}">
+    <label for="fruit">fruit</label>
+  </div>
+  <div class="group">
+    <input type="checkbox"  name="dairy" data-bind="value: {{dairy}}">
+    <label for="dairy">Dairy</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="vegetable" data-bind="value: {{vegetable}}">
+    <label for="vegetable">Vegetable</label>
+  </div>
+  <div class="group">
+    <input type="checkbox"  name="berry" data-bind="value: {{berry}}">
+    <label for="berry">Berry</label>
+  </div>
+  <div class="group">
+    <input type="checkbox"  name="deciduous" data-bind="value: {{deciduous}}">
+    <label for="deciduous">Deciduous</label>
+  </div>
+
+  <div class="group">
+    <input type="checkbox"  name="fields" data-bind="value: {{fields}}">
+    <label for="name">Field</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="wine" data-bind="value: {{wine}}">
+    <label for="name">Wine</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="cellar" data-bind="value: {{cellar}}">
+    <label for="name">Cellar</label>
+  </div>
+
+  <div class="group">
+    <input type="checkbox" name="marketing" data-bind="value: {{marketing}}">
+    <label for="marketing">Marketing</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="receptionist" data-bind="value: {{receptionist}}">
+    <label for="name">Receptionist</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="packaging" data-bind="value: {{packaging}}">
+    <label for="name">Packaging</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="exports" data-bind="value: true">
+    <label for="name">Exports</label>
+  </div>
+  <div class="group">
+    <input type="checkbox" name="tourism" data-bind="value: true">
+    <label for="name">Tourism</label>
+  </div><br>
+  <div class="btn">
+    <input type="submit" value="Accept"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>
+
+

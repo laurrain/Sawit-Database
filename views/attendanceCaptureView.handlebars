@@ -1,0 +1,51 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div id="attend">
+  <!--button class="btn btn-primary" id="print">Print</button-->
+<!--a href="/"><h1 align="center">SAWIT Learner Details</h1></a--> 
+{{#if administrator}}
+    <table class="table" id="attendedList">     
+    <h2 class="text-center">Attendance Capture</h2>  
+    <div  class="dropdown">
+    	<button type="button" class="dropbtn" >DropDown Search</button>
+        <div class="dropdown-content">
+          <a href="/Name">Search By Name</a>
+          <a href="/surname">Search By SurName</a>
+          <a href="/gender">Search By gender</a>
+          <a href="/race">Search By Race</a>
+          <a href="/Language">Search By Language</a>
+          <a href="/address">Search By Address</a>
+          <a href="/course">Search By Course</a>
+          <a href="/locate">Search By Location</a>
+          <a href="/graduate">Search By Graduated</a>
+          <a href="/facilitator">Search By Facilitators</a>
+          <a href="/">Back to Main Menu</a>
+          <a href="/learner">Back to Learners List</a>
+          <a href="/lecturer">Back to Lecturers List</a>
+        </div>
+    </div>
+
+    <button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/'">Back To Main Menu</button>
+ 
+
+      <button id="attendView" type="button" class="btn" onclick="location.href='attendance'" class="col-xs-6" >
+          Capture attendance Registe
+      </button>
+         
+  		<thead>
+
+      		<tr>
+      			<th class=".col-md-1">ID Number</th><th class=".col-md-1">Surname</th><th class=".col-md-1">Name</th><th class=".col-md-1">AccountNo</th><th class=".col-md-1">Branch</th><th class=".col-md-1">Course</th><th class=".col-md-1">Location</th><th class=".col-md-1">facilitator</th>
+    		</tr>
+  		</thead>
+    <tBody>
+				{{#learner}} 
+			<tr>
+  				<td>{{Idnumber}}</td><td>{{surname}}</td><td>{{Name}}</td><td>{{accountNo}}</td><td>{{branch}}</td><td>{{course}}</td><td>{{location}}</td><td>{{facilitator}}</td><td><a href="/attendanceCaptureView/edit/{{Idnumber}}">Edit</a></td><td><a href="/attendanceCaptureView/delete/{{Idnumber}}">Delete</a></td>
+			</tr>
+				{{/learner}}
+	 </tbody>
+</table>
+{{else}}
+      <h1>SORRY, YOU HAVE TO BE ADMININISTRATOR!</h1>
+{{/if}}
+</div>

@@ -1,0 +1,16 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="viewacc">
+<div class="container">
+<h3 class="text-center">Display a learner Account Number</h3>
+
+
+{{#data}}
+<form class="form-content" method="GET" action="/learner/display/{{Idnumber}}"> 
+	Account Number: <input type="text" name="address" value="{{accountNo}}" readonly><br>
+	<div>Branch:</div> <input type="text" name="address" value="{{branch}}" readonly><br>
+	
+	<input id="bt" action="action" type="submit" value="Exit" onclick="history.go(-1);"/>
+</form>
+{{/data}}
+</div>
+</div>

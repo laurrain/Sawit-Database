@@ -1,0 +1,16 @@
+<table class="table" id="locationssList">
+    <tr>
+              
+       <th class=".col-md-1">ID Number</th><th class=".col-md-1">Name</th><th class=".col-md-1">Surname</th><th class=".col-md-1">Gender</th><th class=".col-md-1">Race</th><th class=".col-md-1">Language</th><th class=".col-md-1">Phone</th><th class=".col-md-1">Address</th><th class=".col-md-1">AccountNo</th><th class=".col-md-1">Course</th><th class=".col-md-1">Location</th><th class=".col-md-1">Course Info</th>
+        
+     </tr>                         
+    
+      
+        
+            {{#learner}} 
+      <tr>
+          <td>{{Idnumber}}</td><td>{{Name}}</td><td>{{surname}}</td><td>{{gender}}</td><td>{{race}}</td><td>{{Language}}</td><td>{{phone}}</td><td><a href="/learner/view/{{Idnumber}}">View</a></td><td><a href="/learner/viewAccountNo/{{Idnumber}}">View</a></td><td>{{course}}</td><td>{{location}}</td><td><a href="/learner/edit/{{Idnumber}}">Edit</a></td><td><a href="/learner/delete/{{Idnumber}}">Delete</a></td>
+      </tr>
+        {{/learner}}
+    
+</table>

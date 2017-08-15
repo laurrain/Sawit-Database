@@ -1,0 +1,89 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="edit">
+<h2 class="text-center">Update Learner Details</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/learner'">Back To Learner List</button>
+
+{{#data}}
+<form id="formAdd" autocomplete="on" action="/learner/update/{{Idnumber}}" method="Post">
+  <div class="group">
+  <input type="text" name="Idnumber" value="{{Idnumber}}">
+    <label for="Idnumber">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" name="Name" value="{{Name}}">
+    <label for="name">Name</label>
+  </div>
+  <div class="group">
+    <input type="text" name="surname" value="{{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" name="gender" value="{{gender}}">
+    <label for="name">Gender</label>
+  </div>
+  <div class="group">
+    <input type="text" name="race" value="{{race}}">
+    <label for="race">Race</label>
+  </div>
+  <div class="group">
+    <input type="text" name="Language" value="{{Language}}">
+    <label for="Language">Home Language</label>
+  </div>
+  <div class="group">
+    <input type="text" name="phone" value="{{phone}}">
+    <label for="phone">Phone Number</label>
+  </div>
+
+  <div class="group">
+    <input type="text" name="address" value="{{address}}">
+    <label for="address">Home Address</label>
+  </div>
+  <div class="group">
+    <input type="text" name="accountNo" value="{{accountNo}}">
+    <label for="name">Account Number</label>
+  </div>
+  <div class="group">
+    <input type="text" name="branch" value="{{branch}}">
+    <label for="name">Branch</label>
+  </div>
+
+  <div class="group">
+    <input type="text"  name="course" value="{{course}}">
+    <label for="course">Course</label>
+  </div>
+  <div class="group">
+    <input type="text"  name="location" value="{{location}}">
+    <label for="name">Course Location</label>
+  </div>
+  <div class="group">
+    <input type="text" name="course_date" value="{{course_date}}">
+    <label for="name">Year</label>
+  </div>
+  <div class="group">
+    <input type="text" name="graduate" value="{{graduate}}">
+    <label for="name">Graduate</label>
+  </div>
+  <div class="group">
+    <input type="text" name="facilitator" value="{{facilitator}}">
+    <label for="name">Facilitator Name</label>
+  </div>
+  <div class="group">
+    <input type="text" name="interest" value="{{interest}}">
+    <label for="name">Learner Interest</label>
+  </div>
+  <div class="group">
+    <input type="text" name="education" value="{{education}}">
+    <label for="name">Education Level</label>
+  </div>
+  <div class="group">
+    <input type="text" name="Dependancy" value="{{dependancy}}">
+    <label for="name">Learner Dependancy</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Submit"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>

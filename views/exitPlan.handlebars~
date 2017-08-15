@@ -1,0 +1,35 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div id="placement"> 
+    <table class="table" id="work_locationList">     
+    <h2 class="text-center">Learners Exit Plan</h2>  
+    
+    </div>
+
+    <button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/'">Back To Main Menu</button>
+    <!--button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/excel'">Export</button-->
+
+  	</div> 
+  		<form>
+    		<input class ="searchBar" id ="work_locationsSearchBar" autocomplete="off" type ="text" name="work_location"></input>
+   		</form> 
+
+   		<!--span class="btn btn-info btn-lg" class="glyphicon glyphicon-search">Search</span--> 
+      
+         
+  		<thead>
+
+      	<tr>
+      		<th class=".col-md-1">ID Number</th><th class=".col-md-1">Name</th><th class=".col-md-1">Surname</th><th class=".col-md-1">Educatin Level</th><th class=".col-md-1">Employed</th><th class=".col-md-1">Sector</th><th class=".col-md-1">Entrepreneur</th><th class=".col-md-1">Sectors</th>
+    		</tr>
+
+  		</thead>
+		<tBody>
+				{{#exitPlan}} 
+			<tr>
+  				<td>{{IDno}}</td><td>{{Name}}</td><td>{{surname}}</td><td>{{education}}</td><td>{{employed}}</td><td>{{sector}}</td><td>{{entrepreneur}}</td><td>{{sectors}}</td><td><a href="/exitPlan/editExitPlan/{{IDno}}">Edit</a></td><td><a href="/exitPlan/deleteExitPlan/{{IDno}}">Delete</a></td>
+			</tr>
+				{{/exitPlan}}
+	</tbody>
+</table>
+
+</div>

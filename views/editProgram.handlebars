@@ -1,0 +1,48 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="edit">
+<h2 class="text-center">Modules Evaluation Progress</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/programCurriculum'">Back To Modules Evaluation Progress</button>
+
+{{#data}}
+<form id="formAdd" autocomplete="on" action="/programCurriculum/updateProgram/{{module_name}}" method="Post">
+  <div class="group">
+  <input type="text" name="module_name" value="{{module_name}}">
+    <label for="module_name">Module Name</label>
+  </div>
+  <div class="group">
+    <input type="text" name="facilitator" value="{{facilitator}}">
+    <label for="facilitator">Facilitator</label>
+  </div>
+  <div class="group">
+    <input type="text" name="assess_test" value="{{assess_test}}">
+    <label for="assess_test">Assessment</label>
+  </div>
+  <div class="group">
+    <input type="text" name="assignment" value="{{assignment}}">
+    <label for="assignment">Assignment</label>
+  </div>
+  <div class="group">
+    <input type="text" name="practical" value="{{practical}}">
+    <label for="practical">Practical</label>
+  </div>
+  <div class="group">
+    <input type="text" name="group_work" value="{{group_work}}">
+    <label for="group_work">Group Work</label>
+  </div>
+  <div class="group">
+    <input type="text" name="month" value="{{month}}">
+    <label for="month">Month</label>
+  </div>
+
+  <div class="group">
+    <input type="text" name="placement" value="{{placement}}">
+    <label for="placement">Placement</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Submit"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>

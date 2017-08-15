@@ -1,0 +1,15 @@
+
+<div class="container">
+<h3 class="text-center">Set Date</h3>
+
+
+{{#data}}
+<form class="form-content" method="POST" action="attendance"> 
+	Date: <input type="DATE" name="date" value="{{date}}" >
+	
+	<input id="bt" action="action" type="submit"/><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+</form>
+{{/data}}
+</div>
+
+

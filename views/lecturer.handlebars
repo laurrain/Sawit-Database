@@ -1,0 +1,29 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div id="backgLect">
+  <!--button class="btn btn-primary" id="print">Print</button-->
+<!--a href="/"><h1 align="center">SAWIT Learner Details</h1></a--> 
+    <table class="table" id="learnerList">     
+    <h2 class="text-center">Facilitators Details</h2>  
+
+      <button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/'">Back To Main Menu</button>
+    
+
+  	</div> 
+  		
+      <button id="lect" type="button" class="btn" onclick="location.href='facilitator_add'" class="col-xs-6" >
+          Add A Facilitator
+      </button> 
+         
+  		<thead>
+      		<tr>
+      			<th class=".col-md-1">ID Number</th><th class=".col-md-1">Name</th><th class=".col-md-1">Surname</th><th class=".col-md-1">Phone</th><th class=".col-md-1">E-mail</th><th class=".col-md-1">Course</th><th class=".col-md-1">Course Location</th>
+    		</tr>
+  		</thead>
+		  <tBody>
+				{{#facilitator}} 
+			<tr>
+  				<td>{{idNo}}</td><td>{{Name}}</td><td>{{surname}}</td><td>{{phone}}</td><td>{{email}}</td><td>{{course}}</td><td>{{location}}</td><td><a href="/lecturer/editLecturer/{{idNo}}">Edit</a></td><td><a href="/lecturer/deleteFacilitator/{{idNo}}">Delete</a></td>
+			</tr>
+				{{/facilitator}}
+	   </tbody>
+</table>

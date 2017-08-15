@@ -1,0 +1,49 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="add">
+<h2 class="text-center">Add Learner Exit Progress</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/exitPlan'">Back To Learner Exit Plan List</button>
+ {{#data}}
+ <form id="formAdd" autocomplete="on" action="/exitPlan_add" method="Post">
+  <div class="group">
+    <input type="text" placeholder="ID Number" name="IDno"  value="{{IDno}}">
+    <label for="IDno">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Name" name="Name"  value="{{Name}}">
+    <label for="Name">Name</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Surname" name="surname"  value="{{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Education Level" name="education" data-bind="value: {{education}}">
+    <label for="education">Education</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Employed?" name="employed" data-bind="value: {{employed}}">
+    <label for="employed">Employed?</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Sector" name="sector" data-bind="value: {{sector}}">
+    <label for="sector">Sector</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Entrepreneur?" name="entrepreneur" data-bind="value: {{entrepreneur}}">
+    <label for="entrepreneur">Entrepreneur</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="Sectors" name="sectors" data-bind="value: {{sectors}}">
+    <label for="sectors">Sectors</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Accept"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>
+
+

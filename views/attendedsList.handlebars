@@ -1,0 +1,17 @@
+<table class="table" id="attendedsList">
+    <tr>
+        <th>ID Number</th>
+        <th>Surname</th>
+        <th>Name</th>
+        <th>Account NO</th>
+        <th>Branch</th>
+        <th>Course</th>
+        <th>Location</th>
+        <th>Facilitator</th>
+    </tr>                          
+    {{#learner}} 
+        <tr>
+            <td>{{Idnumber}}</td><td>{{surname}}</td><td>{{Name}}</td><td>{{accountNo}}</td><td>{{branch}}</td><td>{{course}}</td><td>{{location}}</td><td>{{facilitator}}</td><td><a href="/attendanceCaptureView/edit/{{Idnumber}}">Edit</a></td><td><a href="/attendanceCaptureView/delete/{{Idnumber}}">Delete</a></td>
+        </tr>
+    {{/learner}}              
+</table>

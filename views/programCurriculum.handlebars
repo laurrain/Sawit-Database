@@ -1,0 +1,49 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div id="backg">
+    <!-- end of form container -->
+  <!--button class="btn btn-primary" id="print">Print</button-->
+<!--a href="/"><h1 align="center">SAWIT Learner Details</h1></a--> 
+    <table class="table" id="learnerList">     
+    <h2 class="text-center">Modules Evaluation Progress</h2>  
+    <div  class="dropdown">
+    	<button type="button" class="dropbtn" >DropDown Search</button>
+        <div class="dropdown-content">
+          <a href="/Name">Search By Name</a>
+          <a href="/surname">Search By SurName</a>
+          <a href="/gender">Search By gender</a>
+          <a href="/race">Search By Race</a>
+          <a href="/Language">Search By Language</a>
+          <a href="/address">Search By Address</a>
+          <a href="/course">Search By Course</a>
+          <a href="/location">Search By Location</a>
+          <a href="/graduate">Search By Graduated</a>
+          <a href="/facilitator">Search By Facilitators</a>
+          <a href="/">Back to Main Menu</a>
+          <a href="/learner">Back to Learners List</a>
+          <a href="/lecturer">Back to Lecturers List</a>
+        </div>
+    </div>
+
+    <button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/'">Back To Main Menu</button>
+    <!--button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/excel'">Export</button-->
+
+      <button type="button" class="btn" onclick="location.href='programCurriculum_add'" class="col-xs-6" >
+          Add A Modules
+      </button> 
+         
+  		<thead>
+
+      	<tr>
+      		<th class=".col-md-1">Module Name</th><th class=".col-md-1">Facilitator</th><th class=".col-md-1">Assessment Test</th><th class=".col-md-1">Assignment</th><th class=".col-md-1">Practical</th><th class=".col-md-1">Group Work</th><th class=".col-md-1">Month</th><th class=".col-md-1">Placement</th>
+    		</tr>
+
+  		</thead>
+		<tBody>
+				{{#programCurriculum}} 
+			<tr>
+  				<td>{{module_name}}</td><td>{{facilitator}}</td><td>{{assess_test}}</td><td>{{assignment}}</td><td>{{practical}}</td><td>{{group_work}}</td><td>{{month}}</td><td>{{placement}}</td><td><a href="/programCurriculum/editProgram/{{module_name}}">Edit</a></td><td><a href="/programCurriculum/deleteProgram/{{module_name}}">Delete</a></td>
+			</tr>
+				{{/programCurriculum}}
+	</tbody>
+</table>
+</div>

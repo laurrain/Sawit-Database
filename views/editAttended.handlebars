@@ -1,0 +1,50 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="editattent">
+<h2 class="text-center">Update Faclitator Details</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/lecturer'">Back To Lecturer List</button>
+
+{{#data}}
+<form id="formEditattent" autocomplete="on" action="/attendanceCaptureView/update/{{Idnumber}}" method="Post">
+  <div class="group">
+  <input type="text" name="Idnumber" value="{{Idnumber}}">
+    <label for="Idnumber">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" name="surname" value="{{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" name="Name" value="{{Name}}">
+    <label for="name">Name</label>
+  </div>
+  
+  <div class="group">
+    <input type="text" name="accountNo" value="{{accountNo}}">
+    <label for="phone">account Number</label>
+  </div>
+
+  <div class="group">
+    <input type="text" name="branch" value="{{branch}}">
+    <label for="address">Branch</label>
+  </div>
+
+  <div class="group">
+    <input type="text"  name="course" value="{{course}}">
+    <label for="course">Course</label>
+  </div>
+  <div class="group">
+    <input type="text"  name="location" value="{{location}}">
+    <label for="name">Course Location</label>
+  </div>
+  <div class="group">
+    <input type="text"  name="facilitator" value="{{facilitator}}">
+    <label for="name">Facilitator</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Submit"><input action="action" type="submit" value="Cancel" onclick="attendanceCaptureView;"/>
+    
+  </div>
+
+</form>
+{{/data}}
+</div>

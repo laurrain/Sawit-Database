@@ -1,0 +1,55 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<div id="profile">
+<table class="table" id="profileList"> 
+  <!--button class="btn btn-primary" id="print">Print</button-->
+<!--a href="/"><h1 align="center">SAWIT Learner Details</h1></a--> 
+        
+    <h3 class="text-center">learners Profile</h3>  
+    <div  class="dropdown">
+    	<button type="button" class="dropbtn" >DropDown Search</button>
+        <div class="dropdown-content">
+          <a href="/Name">Search By Name</a>
+          <a href="/surname">Search By SurName</a>
+          <a href="/gender">Search By gender</a>
+          <a href="/race">Search By Race</a>
+          <a href="/Language">Search By Language</a>
+          <a href="/address">Search By Address</a>
+          <a href="/course">Search By Course</a>
+          <a href="/location">Search By Location</a>
+          <a href="/graduate">Search By Graduated</a>
+          <a href="/facilitator">Search By Facilitators</a>
+          <a href="/">Back to Main Menu</a>
+          <a href="/learner">Back to Learners List</a>
+          <a href="/lecturer">Back to Lecturers List</a>
+        </div>
+    </div>
+
+    <button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/'">Back To Main Menu</button>
+    
+
+  	</div> 
+    
+  		<form>
+    		<input class ="searchBar" id ="profilesSearchBar" autocomplete="off" type ="text" name="learnerProfile"></input>
+   		</form> 
+
+   		<span class="btn btn-info btn-lg" class="glyphicon glyphicon-search">Search</span> 
+        
+  		<thead>
+      	<tr>
+      			<th class=".col-md-2">Surname</th><th class=".col-md-2">Name</th><th class=".col-md-2">Learner Interest</th><th class=".col-md-2">Education Level</th><th class=".col-md-2">Dependancy</th>
+    		</tr>
+  		</thead>
+		<tBody>
+				{{#learner}} 
+        
+			<tr>
+  				<td>{{surname}}</td><td>{{Name}}</td><td>{{interest}}</td><td>{{education}}</td><td>{{dependancy}}</td>
+      </tr>
+				{{/learner}}
+	</tbody> 
+</table>
+</div>
+
+S

@@ -1,0 +1,90 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="add">
+<h2 class="text-center">Add a learner</h2>
+<button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/learner'">Back To Learner List</button>
+{{#if administrator}}
+ {{#data}}
+ <form id="formAdd" autocomplete="on" action="/learner_add" method="Post">
+  <div class="group">
+    <input type="text" placeholder="Id Number" name="Idnumber"  data-bind="value: {{Idnumber}}">
+    <label for="Idnumber">ID Number</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Name" name="Name" data-bind="value: {{Name}}">
+    <label for="name">Name</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Surname" name="surname" data-bind="value: {{surname}}">
+    <label for="surname">Surname</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Gender" name="gender" data-bind="value: {{gender}}">
+    <label for="name">Gender</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Race" name="race" data-bind="value: {{race}}">
+    <label for="race">Race</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Home Language" name="Language" data-bind="value: {{Language}}">
+    <label for="Language">Home Language</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Phone Number" name="phone" data-bind="value: {{phone}}">
+    <label for="phone">Phone Number</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="Home Address" name="address" data-bind="value: {{address}}">
+    <label for="address">Home Address</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Account Number" name="accountNo" data-bind="value: {{accountNo}}">
+    <label for="name">Account Number</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Branch" name="branch" data-bind="value: {{branch}}">
+    <label for="name">Branch</label>
+  </div>
+
+  <div class="group">
+    <input type="text" placeholder="Course" name="course" data-bind="value: {{course}}">
+    <label for="course">Course</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Course Location" name="location" data-bind="value: {{location}}">
+    <label for="name">Course Location</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="yyyy-mm-dd" name="course_date" data-bind="value: {{course_date}}">
+    <label for="name">Year</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Facilitator Name" name="facilitator" data-bind="value: {{facilitator}}">
+    <label for="name">Facilitator Name</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="learner Interest" name="interest" data-bind="value: {{interest}}">
+    <label for="name">Learner Interest</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Education Level" name="education" data-bind="value: {{education}}">
+    <label for="name">Education Level</label>
+  </div>
+  <div class="group">
+    <input type="text" placeholder="Dependancy" name="dependancy" data-bind="value: {{dependancy}}">
+    <label for="name">Learner Dependancy</label>
+  </div>
+  <div class="btn">
+    <input type="submit" value="Accept"><input action="action" type="submit" value="Cancel" onclick="history.go(-1);"/>
+    
+  </div>
+
+</form>
+{{/data}}
+{{else}}
+  <h1>SORRY, YOU HAVE TO BE ADMININISTRATOR!</h1>
+{{/if}}
+</div>
+
+

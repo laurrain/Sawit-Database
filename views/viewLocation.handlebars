@@ -1,0 +1,31 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div  id="viewloc">
+<div class="container">
+<h3 class="text-center">Display a learner Course Information</h3>
+
+
+{{#data}}
+<form class="form-content" method="GET" action="/learner/display/{{Idnumber}}"> 
+	<div class="group">
+    <input type="text"  name="location" value="{{location}}" readOnly/>
+    <label for="name">Training Venue</label>
+  </div>
+  <div class="group">
+    <input type="text" name="course_date" value="{{course_date}}" readOnly/>
+    <label for="name">Year</label>
+  </div>
+  <div class="group">
+    <input type="text" name="graduate" value="{{graduate}}" readonly/>
+    <label for="name">Graduated</label>
+  </div>
+  <div class="group">
+    <input type="text" name="facilitator" value="{{facilitator}}" readonly>
+    <label for="name">Facilitator Name</label>
+  </div>
+	
+	
+	<input id="bt" action="action" type="submit" value="Exit" onclick="history.go(-1);"/>
+</form>
+{{/data}}
+</div>
+</div>

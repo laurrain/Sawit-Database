@@ -1,0 +1,63 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div id="backg">
+  {{#if administrator}}
+    <!-- end of form container -->
+  <!--button class="btn btn-primary" id="print">Print</button-->
+<!--a href="/"><h1 align="center">SAWIT Learner Details</h1></a--> 
+    <table class="table" id="learnerList">     
+    <h2 class="text-center">Learners Details</h2>  
+    <div  class="dropdown">
+    	<button type="button" class="dropbtn" >DropDown Search</button>
+        <div class="dropdown-content">
+          <a href="/Name">Search By Name</a>
+          <a href="/surname">Search By SurName</a>
+          <a href="/gender">Search By gender</a>
+          <a href="/race">Search By Race</a>
+          <a href="/Language">Search By Language</a>
+          <a href="/address">Search By Address</a>
+          <a href="/course">Search By Course</a>
+          <a href="/location">Search By Location</a>
+          <a href="/graduate">Search By Graduated</a>
+          <a href="/facilitator">Search By Facilitators</a>
+          <a href="/">Back to Main Menu</a>
+          <a href="/learner">Back to Learners List</a>
+          <a href="/lecturer">Back to Lecturers List</a>
+        </div>
+    </div>
+
+    <button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/'">Back To Main Menu</button>
+    <!--button type="button" class="dropbtn" id="mainmenu" onclick="location.href='/excel'">Export</button-->
+
+  	</div> 
+  		<form>
+    		<input class ="searchBar" id ="learnersSearchBar" autocomplete="off" type ="text" name="learner"></input>
+   		</form> 
+
+   		<span class="btn btn-info btn-lg" class="glyphicon glyphicon-search">Search</span> 
+      <button type="button" class="btn" onclick="location.href='learner_add'" class="col-xs-6" >
+          Add A Learner
+      </button> 
+         
+  		<thead>
+
+      	<tr>
+      		<th class=".col-md-1">ID Number</th><th class=".col-md-1">Name</th><th class=".col-md-1">Surname</th><th class=".col-md-1">Gender</th><th class=".col-md-1">Race</th><th class=".col-md-1">Language</th><th class=".col-md-1">Phone</th><th class=".col-md-1">Address</th><th class=".col-md-1">AccountNo</th><th class=".col-md-1">Course</th><th class=".col-md-1">Course Info</th><th class=".col-md-1">Personal Info</th>
+    		</tr>
+
+        <tr>
+          <th class=".col-md-1">Total F & M: </th>{{#data}}<th class=".col-md-1">{{sex}}</th>{{/data}} 
+        </tr>
+
+  		</thead>
+		<tBody>
+				{{#learner}} 
+			<tr>
+  				<td><a href="/placement_add/{{Idnumber}}">{{Idnumber}}</a></td><td>{{Name}}</td><td>{{surname}}</td><td>{{gender}}</td><td>{{race}}</td><td>{{Language}}</td><td>{{phone}}</td><td><a href="/learner/view/{{Idnumber}}">View</a></td><td><a href="/learner/viewAccountNo/{{Idnumber}}">View</a></td><td>{{course}}</td><td><a href="/learner/viewLocation/{{Idnumber}}">View</a></td><td><a href="/learner/viewPersonalInfo/{{Idnumber}}">View</a></td><td><a href="/learner/edit/{{Idnumber}}">Edit</a></td><td><a href="/learner/delete/{{Idnumber}}">Delete</a></td>
+			</tr>
+				{{/learner}}
+	</tbody>
+</table>
+{{else}}
+      <h1>SORRY, YOU HAVE TO BE ADMININISTRATOR!</h1>
+{{/if}}
+</div>

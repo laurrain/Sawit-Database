@@ -1,0 +1,36 @@
+         
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div class="main-container container">
+			<!-- button starts-->
+		<div class="navbar container btn-container col-xs-12">
+			
+			<div class="row col-xs-12">	
+				<button onclick="location.href='/learner'" class="col-xs-3">
+					Learner
+				</button>
+				<button onclick="location.href='/learner/sort/Name'" class="col-xs-3">
+					Sort
+				</button>
+				<button onclick="location.href='/learner/sort/Idnumber'" class="col-xs-3">
+					Sort
+				</button>
+			</div>
+	</div>
+<div id="add" class="row col-xs-12">
+<table class="table" id="customersList"> 
+	<thead>
+	<tr>
+		<th class="col-md-3"><a href='/learner/sort/Idnumber'>Id Number</a></th><th class="col-md-3"><a href='/learner/sort/Name'>Name</a></th><th class="col-md-3"><a href='/learner/sort/surname'>SurName</a></th>
+	</tr>
+</thead>
+{{#learner}}	
+
+<tr>
+	<td><a href="learner/{{Idnumber}}">{{Idnumber}}</a></td><td><a href="learner/{{Idnumber}}">{{Name}}</a></td><td><a href="learner/{{Idnumber}}">{{surname}}</a></td><td>
+</tr>
+{{/learner}}	
+</table>
+
+</div>
+
+

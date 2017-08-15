@@ -1,0 +1,13 @@
+<div id="head"> <a href="/"><h1>SAWIT Educate To Empower</h1></a> </div>
+<div class="container">
+<h3 class="text-center">Display a learner Facilitator</h3>
+
+
+{{#data}}
+<form class="form-content" method="GET" action="/learner/display/{{Idnumber}}"> 
+	Facilitator: <input type="text" name="facilitator" value="{{facilitator}}" readonly>
+	
+	<input id="bt" action="action" type="submit" value="Exit" onclick="history.go(-1);"/>
+</form>
+{{/data}}
+</div>

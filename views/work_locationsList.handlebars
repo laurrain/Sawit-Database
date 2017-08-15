@@ -1,0 +1,18 @@
+<table class="table" id="work_locationsList">
+    <tr>
+        <th>ID Number</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Work Location</th>
+        <th>Renumeration</th>
+        <th>Activities</th>
+        <th>Month</th>
+        <th>Sign Attendance</th>
+        
+    </tr>                          
+    {{#placement}} 
+        <tr>
+            <td>{{Idnumber}}</td><td>{{Name}}</td><td>{{surname}}</td><td>{{work_location}}</td><td>{{remuneration_amount}}</td><td>{{activities}}</td><td>{{month}}</td><td>{{sign_attendance}}</td><td><a href="/placement/editPlacement/{{Idnumber}}">Edit</a></td><td><a href="/placement/deletePlacement/{{Idnumber}}">Delete</a></td>
+        </tr>
+    {{/placement}}               
+</table>
