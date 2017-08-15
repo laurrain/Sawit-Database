@@ -235,6 +235,7 @@ app.get('/location/search/:searchValue', learners.getSearchlocations);
 app.get('/graduate/graduatesList/:graduate', learners.getSearchGraduates);
 app.get('/graduate/search/:searchValue', learners.getSearchGraduates);
 
+//app.get('/attendanceCaptureView/attentendedsList/:surname', learnersMethods.getSearchAttended);
 app.get('/accountNo/search/:searchValue', learners.getSearchAttended);
 
 app.get('/profile/profilesList/:Name', learners.getSearchProfile);
@@ -242,6 +243,10 @@ app.get('/interest/search/:searchValue', learners.getSearchProfile);
 
 app.get('/placement/work_locationsList/:work_location', facilitators.getSearchWork_location);
 app.get('/work_location/search/:searchValue', facilitators.getSearchWork_location);
+
+//app.get('excel', learnersMethods.showExcel);
+    
+
 
 
 app.get("/*", auth.checkUser,function(req, res){
